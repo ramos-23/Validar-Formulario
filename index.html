@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo1.png" alt="primer logo">
+            <img src="tecnm2.png" alt="">
+            <img src="3.png" alt="">
+            <h1>INSTITUTO TECNOLOGICO NACIONAL DE HUEJUTLA</h1>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="container">
+            <form onsubmit="return validarFormulario()">
+                <h2>Formulario de Registro</h2>
+                <div class="content">
+                    <div class="input-box">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" placeholder="ingresa tu nombre" name="nombre" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="apellidop">Apellido Paterno:</label>
+                        <input type="text" placeholder="apellido paterno" name="apellidop" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="apellidom">Apellido Materno:</label>
+                        <input type="text" placeholder="apellido materno" name="apellidom" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" placeholder="ingresa tu fecha de nacimiento" name="nacimiento" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="numero">Número telefónico:</label>
+                        <input type="tel" id="numero" placeholder="ingresa tu número telefónico" name="numero" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" placeholder="dirección" name="direccion" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="carrera">Nombre de la carrera:</label>
+                        <select id="carrera">
+                            <option value="">Selecciona una carrera</option>
+                            <option value="Ingenieria en Sistemas">Ingeniería en Sistemas</option>
+                            <option value="Ingenieria en Agronomia">Ingeniería en Agronomía</option>
+                            <option value="Licenciatura en Biologia">Licenciatura en Biología</option>
+                            <option value="Ingenieria en Gestion Empresarial">Ingeniería en Gestión Empresarial</option>
+                        </select>
+                        <div id="carrera-error" style="color:red;"></div> <!-- Error para carrera -->
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="ingreso">Fecha de ingreso:</label>
+                        <input type="date" placeholder="fecha en que ingresó al plantel" name="ingreso" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="nocontrol">Número de control:</label>
+                        <input type="text" id="nocontrol">
+                        <div id="nocontrol-error" style="color:red;"></div> <!-- Error para número de control -->
+                    
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail:</label>
+                        <input type="email" placeholder="ingresa tu correo electrónico" name="email" required>
+                    </div>
+                    <span class="gender-title">Género</span>
+                    <div class="gender-category">
+                        <input type="radio" name="Genero" id="masculino">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="Genero" id="femenino">
+                        <label for="femenino">Femenino</label>
+                        <input type="radio" name="Genero" id="otro">
+                        <label for="otro">Otro</label>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Registrar</button>
+                    <div id="success-message" style="color:green;"></div> <!-- Mensaje de éxito -->
+
+            </form>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
